@@ -3,20 +3,21 @@ import Slider from 'react-slick';
 
 class SliderNav extends React.Component {
 	render() {
-		return <button {...this.props} style={{color: '#333', fontSize: 42}}><img alt={this.props.title} src={this.props.image} /></button>	
+		return <img {...this.props} alt={this.props.title} src={this.props.src} style={{height: 19, width: 10}} />
 	}
 }
 
 class Carousel extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {primaryImage: props.primaryImage, activeSlide: 1};
+		this.state = {primaryImage: this.props.primaryImage, activeSlide: 1, altImages: this.props.altImages};
+		this.state.altImages.push(this.props.primaryImage);
 		this.updateMainImageFromActiveSlide = this.updateMainImageFromActiveSlide.bind(this);
 	}
 
 	updateMainImageFromActiveSlide(e) {
 		e.preventDefault();
-		this.setState({primaryImage: this.props.altImages[this.state.activeSlide].image});
+		this.setState({primaryImage: this.state.altImages[this.state.activeSlide]});
 	}
 
 	render() {
@@ -28,8 +29,8 @@ class Carousel extends React.Component {
 			centerMode: true,
 			centerPadding: 0,
 			initialSlide: this.state.activeSlide,
-			nextArrow: <SliderNav image={'images/right-arrow.png'} title="Next" />,
-			prevArrow: <SliderNav image={'images/left-arrow.png'} title="Previous" />,
+			nextArrow: <SliderNav src={'images/right-arrow.png'} title="Next" />,
+			prevArrow: <SliderNav src={'images/left-arrow.png'} title="Previous" />,
 			slidesToShow: 1,
 			variableWidth: true,
 		};
@@ -50,12 +51,12 @@ class Carousel extends React.Component {
 		return (
 			<div className="carousel-container">
 				<div className="primary-image-container" style={{height: 463}}>
-					<img className="primary-image" alt="Ninja" itemProp="image" src={this.state.primaryImage} style={{display: 'block', margin: 'auto'}} />
+					<img className="primary-image" alt="Ninja" itemProp="image" src={this.state.primaryImage.image} style={{display: 'block', margin: 'auto'}} />
 				</div>
 				<a className="view-larger" href="#" onClick={this.updateMainImageFromActiveSlide} title="Make the active thumbnail into the main image" style={viewLargerStyles}>view larger</a>
 				<div className="slider-container" style={{height: 65, margin: 'auto', width: 261}}>
 					<Slider {...settings}>
-						{this.props.altImages.map((image, i) => <img className="slide" key={i} alt="Alternate product image" src={image.image} style={{height: 65, margin: '0 11px', width: 65}} />)}
+						{this.state.altImages.map((image, i) => <img className="slide" key={i} alt="Alternate product image" src={image.image} style={{height: 65, margin: '0 11px', width: 65}} />)}
 					</Slider>
 				</div>
 			</div>

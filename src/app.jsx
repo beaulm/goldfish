@@ -10,7 +10,7 @@ class App extends React.Component {
 			<div id="viewport" itemScope itemType="http://schema.org/Product">
 				<div id="image-container" className="mobile-centered">
 					<h1 id="product-title" itemProp="name">{this.props.data.title}</h1>
-					<Carousel primaryImage={this.props.data.Images[0].PrimaryImage[0].image} altImages={this.props.data.Images[0].AlternateImages}/>
+					<Carousel primaryImage={this.props.data.Images[0].PrimaryImage[0]} altImages={this.props.data.Images[0].AlternateImages}/>
 				</div>
 				<div id="info-container" className="mobile-centered">
 					<meta itemProp="priceCurrency" content={this.props.data.Offers[0].OfferPrice[0].currencyCode} />
