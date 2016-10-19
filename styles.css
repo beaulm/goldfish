@@ -105,10 +105,6 @@ a {
 	text-decoration: none;
 }
 
-#add-to-cart-container {
-
-}
-
 #add-to-cart {
 	background: url('images/add-to-cart.png') center center no-repeat;
 }
@@ -145,10 +141,6 @@ a {
 	margin: 0;
 }
 
-#buttons-container {
-
-}
-
 #buttons-container button {
 	background-color: #F3F3F3;
 	border: 0;
@@ -171,10 +163,6 @@ a {
 
 #share {
 	width: 10.95em; /* 146px; */
-}
-
-#product-highlights-container {
-
 }
 
 #product-highlights-title {
