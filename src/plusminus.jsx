@@ -31,11 +31,16 @@ class PlusMinus extends React.Component {
 			cursor: 'pointer',
 			float: 'left',
 			height: 30,
+			opacity: 1,
 			width: 30
 		};
 
 		let minusButtonStyles = JSON.parse(JSON.stringify(buttonStyles));
 		minusButtonStyles.background = "url('images/minus-button.png') center center no-repeat";
+		if(this.state.value === 1) {
+			minusButtonStyles.cursor = 'default';
+			minusButtonStyles.opacity = .5;
+		}
 
 		let plusButtonStyles = JSON.parse(JSON.stringify(buttonStyles));
 		plusButtonStyles.background = "url('images/plus-button.png') center center no-repeat";
@@ -54,9 +59,9 @@ class PlusMinus extends React.Component {
 			<div style={containerStyles}>
 				<span style={{lineHeight: '32px'}}>quantity:</span>
 				<div style={{float: 'right'}}>
-					<div style={minusButtonStyles} onClick={this.decrementValue}></div>
+					<div aria-label="Decrease quantity by one" style={minusButtonStyles} onClick={this.decrementValue}></div>
 					<div style={quantityStyles}>{this.state.value}</div>
-					<div style={plusButtonStyles} onClick={this.incrementValue}></div>
+					<div aria-label="Increase quantity by one" style={plusButtonStyles} onClick={this.incrementValue}></div>
 				</div>
 				<input id={this.props.name} name={this.props.name} min="1" step="1" type="number" style={{display: 'none'}} value={this.state.value} readOnly />
 			</div>
