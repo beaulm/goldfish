@@ -5,7 +5,7 @@ class Review extends React.Component {
 	render() {
 		let reviewDate = new Date(this.props.data.datePosted);
 		return (
-			<div key={this.props.data.reviewKey} itemProp="review" itemScope itemType="http://schema.org/Review">
+			<div key={this.props.data.reviewKey} itemProp="review" itemScope itemType="http://schema.org/Review" style={{paddingTop: 17}}>
 				<Stars value={this.props.data.overallRating} outOf={5} size={15} />
 				<div itemProp="reviewRating" itemScope itemType="http://schema.org/Rating" style={{display: 'none'}}>
 					<meta itemProp="worstRating" content="1" />
