@@ -25,7 +25,7 @@ class Reviews extends React.Component {
 				</div>
 				<div style={{paddingTop: 11}}>
 					<strong style={{color: '#000', fontWeight: 'bold', paddingLeft: 8}}>overall</strong>
-					{!this.state.reviewsVisible ? <a href="#all-reviews" onClick={this.showAllReviews} title="View all ratings" style={{color: '#000', float: 'right', fontWeight: 'bold', marginRight: 17, textDecoration: 'none'}}>view all 14 reviews</a> : null}
+					{!this.state.reviewsVisible ? <a href="#all-reviews" onClick={this.showAllReviews} title="View all ratings" style={{color: '#000', float: 'right', fontWeight: 'bold', marginRight: 17, textDecoration: 'none'}}>view all {this.props.data.Reviews.length} reviews</a> : null}
 				</div>
 				<div style={{backgroundColor: '#F6F5F5', borderRadius: 2, marginTop: 19, padding: '15px 16px 18px 20px'}}>
 					<div style={{float: 'left', width: 226}}>
