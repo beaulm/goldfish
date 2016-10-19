@@ -175,6 +175,7 @@ a {
 
 #product-highlights {
 	line-height: 1.8;
+	list-style-image: url('images/disc.png');
 	padding-left: 1.31em; /* 17px; */
 }
 

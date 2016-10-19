@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 
 class SliderNav extends React.Component {
 	render() {
-		return <button {...this.props} style={{color: '#333', fontSize: 42}}>{this.props.content}</button>	
+		return <button {...this.props} style={{color: '#333', fontSize: 42}}><img alt={this.props.title} src={this.props.image} /></button>	
 	}
 }
 
@@ -28,8 +28,8 @@ class Carousel extends React.Component {
 			centerMode: true,
 			centerPadding: 0,
 			initialSlide: this.state.activeSlide,
-			nextArrow: <SliderNav content={'›'} />,
-			prevArrow: <SliderNav content={'‹'} />,
+			nextArrow: <SliderNav image={'images/right-arrow.png'} title="Next" />,
+			prevArrow: <SliderNav image={'images/left-arrow.png'} title="Previous" />,
 			slidesToShow: 1,
 			variableWidth: true,
 		};
