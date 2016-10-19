@@ -20,10 +20,10 @@ class PlusMinus extends React.Component {
 		let containerStyles = {
 			border: '1px solid #CCC',
 			borderRadius: 2,
-		    boxSizing: 'border-box',
+			boxSizing: 'border-box',
 			height: 40,
 			marginBottom: 30,
-		    padding: '3px 7px 0 10px',
+			padding: '3px 7px 0 10px',
 			width: 239
 		};
 
@@ -34,10 +34,10 @@ class PlusMinus extends React.Component {
 			width: 30
 		};
 
-		let minusButtonStyles = buttonStyles;
+		let minusButtonStyles = JSON.parse(JSON.stringify(buttonStyles));
 		minusButtonStyles.background = "url('images/minus-button.png') center center no-repeat";
 
-		let plusButtonStyles = buttonStyles;
+		let plusButtonStyles = JSON.parse(JSON.stringify(buttonStyles));
 		plusButtonStyles.background = "url('images/plus-button.png') center center no-repeat";
 
 		let quantityStyles = {

@@ -35,7 +35,7 @@ class Carousel extends React.Component {
 		};
 		let viewLargerStyles = {
 			background: "url('images/magnifying-glass.png') left center no-repeat",
-		    boxSizing: 'border-box',
+			boxSizing: 'border-box',
 			color: '#666',
 			display: 'block',
 			fontSize: 14,
@@ -45,7 +45,7 @@ class Carousel extends React.Component {
 			marginBottom: 15,
 			paddingLeft: 32,
 			textDecoration: 'none',
-		    width: 200,
+			width: 200,
 		}
 		return (
 			<div className="carousel-container">

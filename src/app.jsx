@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from './carousel.jsx';
 import PlusMinus from './plusminus.jsx';
 import striptags from 'striptags';
+import Reviews from './reviews.jsx';
 
 class App extends React.Component {
 	render() {
@@ -54,71 +55,7 @@ class App extends React.Component {
 					</div>
 				</div>
 				<div id="review-module-container" className="mobile-centered">
-					<div id="overall-rating-container">
-						<div className="star red"></div>
-						<div className="star red"></div>
-						<div className="star red"></div>
-						<div className="star red"></div>
-						<div className="star red"></div>
-						<div id="overall-rating-metadata" itemProp="aggregateRating" itemScope itemType="http://schema.org/AggregateRating">
-							<meta itemProp="ratingValue" content="4" />
-							<meta itemProp="reviewCount" content="14" />
-						</div>
-					</div>
-					<div id="rating-header">
-						<strong id="overall">overall</strong>
-						<a id="view-all" href="#" title="View all ratings">view all 14 reviews</a>
-					</div>
-					<div id="most-helpful-container">
-						<div id="pro-container">
-							<div className="review-category-header-container">
-								<h3 className="review-category-header">pro</h3>
-								<span className="review-category-description">most helpful 4-5 star review</span>
-							</div>
-							<div className="review-body" itemProp="review" itemScope itemType="http://schema.org/Review">
-								<div className="star red"></div>
-								<div className="star red"></div>
-								<div className="star red"></div>
-								<div className="star red"></div>
-								<div className="star red"></div>
-								<div className="review-rating" itemProp="reviewRating" itemScope itemType="http://schema.org/Rating">
-									<meta itemProp="worstRating" content="1" />
-									<meta itemProp="bestRating" content="5" />
-									<meta itemProp="ratingValue" content="5" />
-								</div>
-								<strong className="review-title" itemProp="name">Fantastic Blender</strong>
-								<p className="review-text" itemProp="description">This blender works amazingly, and blends within seconds. The single serve cups also work really well for smoothies or protein shakes!</p>
-								<a className="review-name" href="#" itemProp="author" title="Read all reviews by this author">Eric</a> <time className="review-time" dateTime="2013-04-18T00:00" itemProp="datePublished">April 18, 2013</time>
-							</div>
-						</div>
-						<div id="con-container">
-							<div className="review-category-header-container">
-								<h3 className="review-category-header">con</h3>
-								<span className="review-category-description">most helpful 1-2 star review</span>
-							</div>
-							<div className="review-body" itemProp="review" itemScope itemType="http://schema.org/Review">
-								<span className="star red"></span>
-								<span className="star gray"></span>
-								<span className="star gray"></span>
-								<span className="star gray"></span>
-								<span className="star gray"></span>
-								<div className="review-rating" itemProp="reviewRating" itemScope itemType="http://schema.org/Rating">
-									<meta itemProp="worstRating" content="1" />
-									<meta itemProp="bestRating" content="5" />
-									<meta itemProp="ratingValue" content="1" />
-								</div>
-								<strong className="review-title" itemProp="name">Very unhappy</strong>
-								<p className="review-text" itemProp="description">Less than 2 months after purchase it completely stopped working. First it wouldn't detect the pitcher when trying to blend a significant amount, a couple weeks later it wouldn't detect the single serve cup.</p>
-								<a className="review-name" href="#" itemProp="author" title="Read all reviews by this author">New York</a> <time className="review-time" dateTime="2013-03-11T00:00" itemProp="datePublished">March 11, 2013</time>
-							</div>
-						</div>
-						<div className="clear"></div>
-					</div>
-					<div id="reviews-container">
-						<div id="review-container">
-							
-						</div>
-					</div>
+					<Reviews data={this.props.data.CustomerReview[0]} />
 				</div>
 			</div>
 		);
