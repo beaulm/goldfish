@@ -79,11 +79,6 @@ a {
 	width: 27.65em; /* 470px; */
 }
 
-.promotion {
-	background: url('images/red-tag.png') left center no-repeat;
-	padding-left: 1.53em; /* 26px; */
-}
-
 #pick-up-in-store-container,
 #add-to-cart-container {
 	float: left;

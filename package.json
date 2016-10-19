@@ -4,7 +4,8 @@
   "description": "Example project",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "prod": "webpack -p --config ./webpack.production.config.js"
   },
   "repository": {
     "type": "git",
