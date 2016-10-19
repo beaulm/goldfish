@@ -11,9 +11,7 @@ Then you can either run it locally:
 1. Start a dev server (`npm run dev`)
 2. Enjoy (point your browser to <http://localhost:8080/webpack-dev-server/>)
 
-or  
-  
-Build a production version:
+or build a production version:
 
 1. Bundle everything together (`npm run prod`)
 2. Enjoy (double-click index.html to view in your browser)
