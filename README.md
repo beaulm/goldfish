@@ -2,7 +2,7 @@
 
 To run locally:
 
-1. Clone this repository (`git clone git@github.com:beaulm/goldfish.git`)
+1. Clone this repository (`git clone https://github.com/beaulm/goldfish.git`)
 2. Change into the project directory (`cd goldfish`)
 3. Install dependencies (`npm install`)
 
