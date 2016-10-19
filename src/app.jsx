@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from './carousel.jsx';
+import PlusMinus from './plusminus.jsx';
 import striptags from 'striptags';
 
 class App extends React.Component {
@@ -18,15 +19,7 @@ class App extends React.Component {
 						<div className="promotion">$25 gift card with purchase of a select Ninja blender</div>
 					</div>
 					<form id="buy-form" name="buy-form">
-						<div id="quantity-container">
-							<span id="quantity-label">quantity:</span>
-							<div id="quantity-control">
-								<div id="minus-button"></div>
-								<div id="quantity">1</div>
-								<div id="plus-button"></div>
-							</div>
-							<input id="quantity-input" name="quantity-input" min="0" step="1" type="number" value="1" />
-						</div>
+						<PlusMinus name="quantity" />
 						{
 							(this.props.data.purchasingChannelCode === '0' || this.props.data.purchasingChannelCode === '2') ? 
 								<div id="pick-up-in-store-container">

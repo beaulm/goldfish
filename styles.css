@@ -84,58 +84,6 @@ a {
 	padding-left: 1.53em; /* 26px; */
 }
 
-#buy-form {
-
-}
-
-#quantity-container {
-	border: 1px solid #CCC;
-	border-radius: 2px;
-    box-sizing: border-box;
-	height: 3.08em; /* 40px; */
-	margin-bottom: 2.31em; /* 30px; */
-    padding: .23em .54em 0 .77em; /* 3px 7px 0 10px; */
-	width: 18.38em; /* 239px; */
-}
-
-#quantity-label {
-	line-height: 2.46em; /* 32px; */
-}
-
-#quantity-control {
-	float: right;
-}
-
-#minus-button,
-#plus-button {
-	cursor: pointer;
-	float: left;
-	height: 2.31em; /* 30px; */
-	width: 2.31em; /* 30px; */
-}
-
-#minus-button {
-	background: url('images/minus-button.png') center center no-repeat;
-}
-
-#quantity {
-	color: #000;
-	float: left;
-	font-size: 115%; /* 15px; */
-	font-weight: bold;
-	line-height: 2em; /* 30px; */
-	margin-left: .87em; /* 13px; */
-	margin-right: 1.07em; /* 16px; */
-}
-
-#plus-button {
-	background: url('images/plus-button.png') center center no-repeat;
-}
-
-#quantity-input {
-	display: none;
-}
-
 #pick-up-in-store-container,
 #add-to-cart-container {
 	float: left;

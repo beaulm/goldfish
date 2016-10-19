@@ -48,12 +48,12 @@ class Carousel extends React.Component {
 		    width: 200,
 		}
 		return (
-			<div id="carousel-container">
-				<div id="primary-image-container" style={{height: 463}}>
-					<img id="primary-image" alt="Ninja" itemProp="image" src={this.state.primaryImage} style={{display: 'block', margin: 'auto'}} />
+			<div className="carousel-container">
+				<div className="primary-image-container" style={{height: 463}}>
+					<img className="primary-image" alt="Ninja" itemProp="image" src={this.state.primaryImage} style={{display: 'block', margin: 'auto'}} />
 				</div>
-				<a id="view-larger" href="#" onClick={this.updateMainImageFromActiveSlide} title="Make the active thumbnail into the main image" style={viewLargerStyles}>view larger</a>
-				<div id="slider-container" style={{height: 65, margin: 'auto', width: 261}}>
+				<a className="view-larger" href="#" onClick={this.updateMainImageFromActiveSlide} title="Make the active thumbnail into the main image" style={viewLargerStyles}>view larger</a>
+				<div className="slider-container" style={{height: 65, margin: 'auto', width: 261}}>
 					<Slider {...settings}>
 						{this.props.altImages.map((image, i) => <img className="slide" key={i} alt="Alternate product image" src={image.image} style={{height: 65, margin: '0 11px', width: 65}} />)}
 					</Slider>
