@@ -38,25 +38,12 @@ a {
 	text-align: center;
 }
 
-#primary-image-container {
-	height: 42.69em; /* 555px; */
+.slick-prev:before,
+.slick-next:before {
+	display: none;
 }
 
-#primary-image {
-	display: block;
-	margin: auto;
-}
-
-#slider-container {
-
-}
-
-.slide {
-	height: 5em; /* 65px; */
-	width: 5em; /* 65px; */
-}
-
-.slide.active {
+.slick-active {
 	border: 1px solid #999;
 	border-radius: 2px;
 }
