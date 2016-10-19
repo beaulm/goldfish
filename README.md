@@ -1,1 +1,1 @@
-# goldfish
+# Example project

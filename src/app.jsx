@@ -38,13 +38,21 @@ class App extends React.Component {
 						</div>
 						<input id="quantity-input" name="quantity-input" min="0" step="1" type="number" value="1" />
 					</div>
-					<div id="pick-up-in-store-container">
-						<button id="pick-up-in-store" className="buy-button" name="pick-up-in-store" aria-label="Pick up in store"></button>
-						<a id="find-in-a-store" href="#" title="Find in a store">find in a store</a>
-					</div>
-					<div id="add-to-cart-container">
-						<button id="add-to-cart" className="buy-button" name="add-to-cart" aria-label="Add to cart"></button>
-					</div>
+					{
+						(this.props.data.purchasingChannelCode === '0' || this.props.data.purchasingChannelCode === '2') ? 
+							<div id="pick-up-in-store-container">
+								<button id="pick-up-in-store" className="buy-button" name="pick-up-in-store" aria-label="Pick up in store"></button>
+								<a id="find-in-a-store" href="#" title="Find in a store">find in a store</a>
+							</div> 
+						: null
+					}
+					{
+						(this.props.data.purchasingChannelCode === '0' || this.props.data.purchasingChannelCode === '1') ? 
+							<div id="add-to-cart-container">
+								<button id="add-to-cart" className="buy-button" name="add-to-cart" aria-label="Add to cart"></button>
+							</div>
+						: null
+					}
 				</form>
 				<div id="returns-container">
 					<div id="returns">returns</div>
