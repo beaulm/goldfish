@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from './carousel.jsx';
+import Promotion from './promotion.jsx';
 import PlusMinus from './plusminus.jsx';
 import striptags from 'striptags';
 import Reviews from './reviews.jsx';
@@ -15,10 +16,7 @@ class App extends React.Component {
 				<div id="info-container" className="mobile-centered">
 					<meta itemProp="priceCurrency" content={this.props.data.Offers[0].OfferPrice[0].currencyCode} />
 					<strong id="price" itemProp="price" content={this.props.data.Offers[0].OfferPrice[0].priceValue/100}>{this.props.data.Offers[0].OfferPrice[0].formattedPriceValue}</strong> <span id="price-qualifier">{this.props.data.Offers[0].OfferPrice[0].priceQualifier}</span>
-					<div id="promotions">
-						<div className="promotion">spend $50, ship free</div>
-						<div className="promotion">$25 gift card with purchase of a select Ninja blender</div>
-					</div>
+					{(this.props.data.hasOwnProperty('Promotions') && this.props.data.Promotions.length > 0) ? <div id="promotions">{this.props.data.Promotions.map((promotion, i) => <Promotion key={i} text={promotion.Description[0].shortDescription} />)}</div> : null}
 					<form id="buy-form" name="buy-form">
 						<PlusMinus name="quantity" />
 						{
