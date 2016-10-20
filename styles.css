@@ -1,10 +1,11 @@
 html{
+	font-size: 16px;
 	width: 100%;
 }
 
 body{
 	color: #666;
-	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: small; /* This computes to about 13px */
 	margin: 0;
 }
@@ -15,7 +16,7 @@ a {
 
 #viewport {
 	margin: auto;
-	max-width: 76.93em; /* 1000px */
+	max-width: 76.92em; /* 1000px */
 	padding: 3em 0;
 }
 
@@ -24,7 +25,7 @@ a {
 #image-container {
 	float: left;
 	margin-right: 1.54em; /* 20px; */
-	width: 37.15em; /* 483px; */
+	width: 37.69em; /* 490px; */
 }
 
 #product-title {
@@ -53,7 +54,7 @@ a {
 
 #info-container {
 	float: right;
-	width: 37.15em; /* 483px; */
+	width: 37.69em; /* 490px; */
 }
 
 #price {
@@ -110,7 +111,7 @@ a {
 	font-size: 102.56%; /* 13.3333px; */
 	height: 3.15em; /* 42px; */
 	outline: none;
-	width: 17.8em; /* 237px; */
+	width: 18em; /* 240px; */
 }
 
 #returns-container {
@@ -183,7 +184,7 @@ a {
 #review-module-container {
 	clear: left;
 	padding-top: 1.92em; /* 25px; */
-	width: 37.15em; /* 483px; */
+	width: 37.69em; /* 490px; */
 }
 
 .clear {
@@ -192,7 +193,7 @@ a {
 
 /* ---------------- */
 
-@media screen and (max-width: 1000px) {
+@media all and (max-width: 65em) {
 	#viewport .mobile-centered {
 		margin: auto;
 		float: none;
