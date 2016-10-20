@@ -6,4 +6,8 @@ class Promotion extends React.Component {
 	}
 }
 
+Promotion.propTypes = {
+	text: React.PropTypes.string.isRequired
+}
+
 export default Promotion;

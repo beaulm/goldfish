@@ -20,4 +20,8 @@ class Review extends React.Component {
 	}
 }
 
+Review.propTypes = {
+	data: React.PropTypes.object.isRequired
+}
+
 export default Review;

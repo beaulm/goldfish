@@ -27,4 +27,10 @@ class Stars extends React.Component {
 	}
 }
 
+Reviews.propTypes = {
+	outOf: React.PropTypes.number.isRequired,
+	size: React.PropTypes.number.isRequired,
+	value: React.PropTypes.number.isRequired
+}
+
 export default Stars;

@@ -50,4 +50,8 @@ class Reviews extends React.Component {
 	}
 }
 
+Reviews.propTypes = {
+	data: React.PropTypes.object.isRequired
+}
+
 export default Reviews;

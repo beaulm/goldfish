@@ -69,4 +69,8 @@ class PlusMinus extends React.Component {
 	}
 }
 
+PlusMinus.propTypes = {
+	name: React.PropTypes.string.isRequired
+}
+
 export default PlusMinus;

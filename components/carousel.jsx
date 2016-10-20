@@ -7,6 +7,11 @@ class SliderNav extends React.Component {
 	}
 }
 
+SliderNav.propTypes = {
+	title: React.PropTypes.string.isRequired,
+	src: React.PropTypes.string.isRequired
+}
+
 class Carousel extends React.Component {
 	constructor(props) {
 		super(props);
@@ -16,7 +21,7 @@ class Carousel extends React.Component {
 	}
 
 	componentDidMount() {
-		setTimeout(() => this.setState({activeSlide: this.state.activeSlide}), 10);
+		setTimeout(() => this.setState({breakpoint: null}), 10);
 	}
 
 	updateMainImageFromActiveSlide(e) {
@@ -66,6 +71,11 @@ class Carousel extends React.Component {
 			</div>
 		);
 	}
+}
+
+Carousel.propTypes = {
+	primaryImage: React.PropTypes.object.isRequired,
+	altImages: React.PropTypes.object.isRequired
 }
 
 export default Carousel;
