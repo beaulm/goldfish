@@ -6,4 +6,4 @@ class Promotion extends React.Component {
 	}
 }
 
-module.exports = Promotion;
+export default Promotion;

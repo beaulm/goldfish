@@ -20,4 +20,4 @@ class Review extends React.Component {
 	}
 }
 
-module.exports = Review;
+export default Review;

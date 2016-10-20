@@ -69,4 +69,4 @@ class PlusMinus extends React.Component {
 	}
 }
 
-module.exports = PlusMinus;
+export default PlusMinus;

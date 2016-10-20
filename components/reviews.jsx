@@ -50,4 +50,4 @@ class Reviews extends React.Component {
 	}
 }
 
-module.exports = Reviews;
+export default Reviews;

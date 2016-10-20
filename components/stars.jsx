@@ -27,4 +27,4 @@ class Stars extends React.Component {
 	}
 }
 
-module.exports = Stars;
+export default Stars;
