@@ -57,7 +57,7 @@ class PlusMinus extends React.Component {
 
 		return (
 			<div style={containerStyles}>
-				<span style={{lineHeight: '32px'}}>quantity:</span>
+				<label htmlFor={this.props.name} style={{lineHeight: '32px'}}>quantity:</label>
 				<div style={{float: 'right'}}>
 					<div aria-label="Decrease quantity by one" style={minusButtonStyles} onClick={this.decrementValue}></div>
 					<div style={quantityStyles}>{this.state.value}</div>
