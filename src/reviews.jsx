@@ -28,14 +28,14 @@ class Reviews extends React.Component {
 					{!this.state.reviewsVisible ? <a href="#all-reviews" onClick={this.showAllReviews} title="View all ratings" style={{color: '#000', float: 'right', fontWeight: 'bold', marginRight: 17, textDecoration: 'none'}}>view all {this.props.data.Reviews.length} reviews</a> : null}
 				</div>
 				<div style={{backgroundColor: '#F6F5F5', borderRadius: 2, marginTop: 19, padding: '15px 16px 18px 20px'}}>
-					<div style={{float: 'left', width: 226}}>
+					<div style={{float: 'left', width: 223}}>
 						<div style={{borderBottom: '1px solid #CCC', paddingBottom: 16}}>
 							<h3 style={{color: '#000', fontWeight: 'normal', margin: 0, textTransform: 'uppercase'}}>pro</h3>
 							<span>most helpful 4-5 star review</span>
 						</div>
 						<Review data={this.props.data.Pro[0]} />
 					</div>
-					<div style={{float: 'left', width: 226}}>
+					<div style={{float: 'left', width: 223}}>
 						<div style={{borderBottom: '1px solid #CCC', paddingBottom: 16}}>
 							<h3 style={{color: '#000', fontWeight: 'normal', margin: 0, textTransform: 'uppercase'}}>con</h3>
 							<span>most helpful 1-2 star review</span>
