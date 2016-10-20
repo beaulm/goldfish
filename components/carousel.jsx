@@ -15,9 +15,9 @@ class Carousel extends React.Component {
 		this.updateMainImageFromActiveSlide = this.updateMainImageFromActiveSlide.bind(this);
 	}
 
-	// componentDidMount() {
-	// 	setTimeout(() => this.setState({activeSlide: this.state.activeSlide}), 10);
-	// }
+	componentDidMount() {
+		setTimeout(() => this.setState({activeSlide: this.state.activeSlide}), 10);
+	}
 
 	updateMainImageFromActiveSlide(e) {
 		e.preventDefault();
