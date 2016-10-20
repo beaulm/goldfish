@@ -6,6 +6,11 @@ import striptags from 'striptags';
 import Reviews from './reviews.jsx';
 
 class App extends React.Component {
+	unhandledButtonClick(e) {
+		e.preventDefault();
+		alert('Feature unavailable at this time');
+	}
+
 	render() {
 		return (
 			<div id="viewport" itemScope itemType="http://schema.org/Product">
@@ -22,14 +27,14 @@ class App extends React.Component {
 						{
 							(this.props.data.purchasingChannelCode === '0' || this.props.data.purchasingChannelCode === '2') ?
 								<div id="pick-up-in-store-container">
-									<button id="pick-up-in-store" className="buy-button" name="pick-up-in-store" aria-label="Pick up in store"></button>
-									<a id="find-in-a-store" href="#" title="Find in a store">find in a store</a>
+									<button id="pick-up-in-store" className="buy-button" name="pick-up-in-store" aria-label="Pick up in store" onClick={this.unhandledButtonClick}></button>
+									<a id="find-in-a-store" href="#" title="Find in a store" onClick={this.unhandledButtonClick}>find in a store</a>
 								</div> : null
 						}
 						{
 							(this.props.data.purchasingChannelCode === '0' || this.props.data.purchasingChannelCode === '1') ?
 								<div id="add-to-cart-container">
-									<button id="add-to-cart" className="buy-button" name="add-to-cart" aria-label="Add to cart"></button>
+									<button id="add-to-cart" className="buy-button" name="add-to-cart" aria-label="Add to cart" onClick={this.unhandledButtonClick}></button>
 								</div> : null
 						}
 					</form>
@@ -41,9 +46,9 @@ class App extends React.Component {
 						</div>
 					</div>
 					<div id="buttons-container">
-						<button id="add-to-registry" name="add-to-registry">Add to registry</button>
-						<button id="add-to-list" name="add-to-list">Add to list</button>
-						<button id="share" name="share">Share</button>
+						<button id="add-to-registry" name="add-to-registry" onClick={this.unhandledButtonClick}>Add to registry</button>
+						<button id="add-to-list" name="add-to-list" onClick={this.unhandledButtonClick}>Add to list</button>
+						<button id="share" name="share" onClick={this.unhandledButtonClick}>Share</button>
 					</div>
 					<div id="product-highlights-container">
 						<h2 id="product-highlights-title">product highlights</h2>
