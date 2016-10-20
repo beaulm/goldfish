@@ -8,6 +8,7 @@ body{
 	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: small; /* This computes to about 13px */
 	margin: 0;
+  width: 100%;
 }
 
 a {
@@ -202,4 +203,10 @@ a {
 	#find-in-a-store {
 		display: none;
 	}
+}
+
+@media all and (max-width: 31em) {
+  #viewport .mobile-centered {
+    zoom: .6;
+  }
 }
