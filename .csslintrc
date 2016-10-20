@@ -22,7 +22,7 @@
   "star-property-hack": false,
   "outline-none": false,
   "import": false,
-  "ids": false,
+  "ids": true,
   "underscore-property-hack": false,
   "rules-count": false,
   "qualified-headings": false,
