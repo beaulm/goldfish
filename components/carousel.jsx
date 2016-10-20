@@ -15,6 +15,10 @@ class Carousel extends React.Component {
 		this.updateMainImageFromActiveSlide = this.updateMainImageFromActiveSlide.bind(this);
 	}
 
+	componentDidMount() {
+		setTimeout(() => this.setState({activeSlide: this.state.activeSlide}), 10);
+	}
+
 	updateMainImageFromActiveSlide(e) {
 		e.preventDefault();
 		this.setState({primaryImage: this.state.altImages[this.state.activeSlide]});
@@ -55,7 +59,7 @@ class Carousel extends React.Component {
 				</div>
 				<a className="view-larger" href="#" onClick={this.updateMainImageFromActiveSlide} title="Make the active thumbnail into the main image" style={viewLargerStyles}>view larger</a>
 				<div className="slider-container" style={{height: 65, margin: 'auto', width: 261}}>
-					<Slider {...settings}>
+					<Slider ref="slider" {...settings}>
 						{this.state.altImages.map((image, i) => <img className="slide" key={i} alt="Alternate product image" height={65} src={image.image} style={{height: 65, margin: '0 11px', width: 65}} width={65} />)}
 					</Slider>
 				</div>
