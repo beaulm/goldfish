@@ -1,5 +1,5 @@
 .plusminus-container {
-	border: 1px solid #CCC;
+	border: $gray-border;
 	border-radius: 2px;
 	box-sizing: border-box;
 	height: 3.08em; /* 40px; */
@@ -32,7 +32,7 @@
 		}
 
 		.value-display {
-			color: #000;
+			color: $black;
 			float: left;
 			font-size: 115%; /* 15px; */
 			font-weight: bold;

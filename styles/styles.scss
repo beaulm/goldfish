@@ -1,10 +1,14 @@
+$black: #000;
+$gray: #666;
+$gray-border: 1px solid #CCC;
+
 html{
 	font-size: 16px;
 	width: 100%;
 }
 
 body{
-	color: #666;
+	color: $gray;
 	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: small; /* This computes to about 13px */
 	margin: 0;
@@ -29,14 +33,12 @@ a {
 	display: none;
 }
 
-@import 'carousel';
-@import 'plusminus';
-@import 'promotion';
-@import 'stars';
-@import 'review';
-@import 'reviews';
-
-/* ---------------- */
+@import '_carousel';
+@import '_plusminus';
+@import '_promotion';
+@import '_stars';
+@import '_review';
+@import '_reviews';
 
 #image-container {
 	float: left;
@@ -45,7 +47,7 @@ a {
 }
 
 #product-title {
-	color: #000;
+	color: $black;
 	font-size: 185%; /* 24px; */
 	font-weight: normal;
 	margin: auto;
@@ -65,16 +67,13 @@ a {
 	border-radius: 2px;
 }
 
-/* ---------------- */
-
-
 #info-container {
 	float: right;
 	width: 37.69em; /* 490px; */
 }
 
 #price {
-	color: #000;
+	color: $black;
 	font-size: 215%; /* 28px; */
 }
 
@@ -110,7 +109,7 @@ a {
 }
 
 #find-in-a-store {
-	color: #000;
+	color: $black;
 	display: block;
 	font-weight: bold;
 	text-align: center;
@@ -138,7 +137,7 @@ a {
 }
 
 #returns {
-	border-right: 1px solid #CCC;
+	border-right: $gray-border;
 	float: left;
 	font-size: 146%; /* 19px; */
 	margin-right: .74em; /* 14px; */
@@ -178,7 +177,7 @@ a {
 }
 
 #product-highlights-title {
-	color: #000;
+	color: $black;
 	font-size: 231%; /* 30px; */
 	font-weight: normal;
 	margin-bottom: 1em; /* 30px; */
@@ -195,8 +194,6 @@ a {
 	padding-left: .46em; /* 6px; */
 }
 
-/* ---------------- */
-
 #review-module-container {
 	clear: left;
 	width: 37.69em; /* 490px; */
@@ -205,8 +202,6 @@ a {
 .clear {
 	clear: both;
 }
-
-/* ---------------- */
 
 @media all and (max-width: 65em) {
 	#viewport .mobile-centered {
