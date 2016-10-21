@@ -43,7 +43,7 @@ a {
 #image-container {
 	float: left;
 	margin-right: 1.54em; /* 20px; */
-	width: 37.69em; /* 490px; */
+	max-width: 37.69em; /* 490px; */
 }
 
 #product-title {
@@ -69,7 +69,7 @@ a {
 
 #info-container {
 	float: right;
-	width: 37.69em; /* 490px; */
+	max-width: 37.69em; /* 490px; */
 }
 
 #price {
@@ -92,7 +92,7 @@ a {
 	margin-bottom: 1.76em; /* 30px; */
 	margin-top: 2.06em; /* 35px; */
 	padding: .82em 0 1.12em; /* 14px 0 19px; */
-	width: 27.65em; /* 470px; */
+	max-width: 27.65em; /* 470px; */
 }
 
 #pick-up-in-store-container,
@@ -196,7 +196,7 @@ a {
 
 #review-module-container {
 	clear: left;
-	width: 37.69em; /* 490px; */
+	max-width: 37.69em; /* 490px; */
 }
 
 .clear {
@@ -218,8 +218,95 @@ a {
 	}
 }
 
-@media all and (max-width: 31em) {
-	#viewport .mobile-centered {
-		zoom: .6;
+@media all and (max-width: 30.93em) {
+	#viewport {
+		padding: 0;
+	}
+
+	#product-title {
+		margin-bottom: .79em;
+		padding: 0 1em;
+	}
+
+	.carousel-container .primary-image-container {
+		height: auto;
+		margin-bottom: 2em;
+
+		 .primary-image {
+			height: auto;
+			max-width: 100%;
+		}
+	}
+
+	#price {
+		padding-left: 1em;
+	}
+
+	.promotion {
+		background: url("images/red-tag.png") 0 .23em no-repeat;
+		margin-left: 1em;
+	}
+
+	.plusminus-container {
+		margin: auto;
+		margin-bottom: 1.62em; /* 21px; */
+	}
+
+	#pick-up-in-store-container,
+	#add-to-cart-container {
+		float: none;
+		margin: auto;
+		width: 18.46em; /* 240px; */
+	}
+
+	#pick-up-in-store-container {
+		margin-bottom: 1em;
+	}
+
+	#returns-container {
+		padding: 2.23em 1em 0;
+	}
+
+	#returns {
+		line-height: 2.7;
+	}
+
+	#buttons-container button {
+		display: block;
+		margin: auto;
+		margin-bottom: .83em; /* 11px; */
+		width: 12.9em;
+	}
+
+	#product-highlights-container {
+		padding: 0 1em;
+	}
+
+	.reviews-container {
+		.overall-text {
+			padding: 0;
+		}
+
+		.overall-stars {
+			padding-left: .77em;
+		}
+
+		.view-all {
+			color: #06C;
+		}
+	}
+
+	.review-container {
+		.title-container {
+			padding-bottom: .23em;
+		}
+
+		.review {
+			padding-top: .31em;
+		}
+
+		&:nth-child(2) {
+			margin-top: 2em;
+		}
 	}
 }
