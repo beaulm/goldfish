@@ -1,9 +1,12 @@
 path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+let extractCSS = new ExtractTextPlugin('[name].css');
 
 module.exports = {
 	entry: [
-		'./components/index.jsx'
+		'./index.js'
 	],
 	output: {
 		path: path.join(__dirname, 'public'),
@@ -13,12 +16,16 @@ module.exports = {
 	module: {
 		loaders: [
 			{
-				test: /\.jsx$/,
+				test: /\.jsx?$/,
 				exclude: /node_modules/,
 				loader: 'babel-loader',
 				query: {
 					presets: ['es2015', 'react']
 				}
+			},
+			{
+				test: /\.scss$/i,
+				loader: extractCSS.extract(['css?-url','sass'])
 			}
 		]
 	},
@@ -30,6 +37,7 @@ module.exports = {
 		}),
 		new webpack.optimize.DedupePlugin(),
 		new webpack.optimize.UglifyJsPlugin(),
-		new webpack.optimize.AggressiveMergingPlugin()
+		new webpack.optimize.AggressiveMergingPlugin(),
+		extractCSS
 	]
 }

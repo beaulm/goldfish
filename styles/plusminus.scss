@@ -1,0 +1,44 @@
+.plusminus-container {
+	border: 1px solid #CCC;
+	border-radius: 2px;
+	box-sizing: border-box;
+	height: 3.08em; /* 40px; */
+	margin-bottom: 2.31em; /* 30px; */
+	padding: .23em .54em 0 .77em; /* 3px 7px 0 10px; */
+	width: 18.38em; /* 239px; */
+
+	.label {
+		line-height: 2.46; /* 32px; */
+	}
+
+	.controls-container {
+		float: right;
+
+		.minus-buttom,
+		.plus-button {
+			cursor: pointer;
+			float: left;
+			height: 2.31em; /* 30px; */
+			opacity: 1;
+			width: 2.31em; /* 30px; */
+		}
+
+		.minus-buttom {
+			background: url('images/minus-button.png') center center no-repeat;
+		}
+
+		.plus-button {
+			background: url('images/plus-button.png') center center no-repeat;
+		}
+
+		.value-display {
+			color: #000;
+			float: left;
+			font-size: 115%; /* 15px; */
+			font-weight: bold;
+			line-height: 2em; /* 30px; */
+			margin-left: .87em; /* 13px; */
+			margin-right: 1.07em; /* 16px; */
+		}
+	}
+}

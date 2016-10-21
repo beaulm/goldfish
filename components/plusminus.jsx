@@ -17,53 +17,15 @@ class PlusMinus extends React.Component {
 	}
 
 	render() {
-		let containerStyles = {
-			border: '1px solid #CCC',
-			borderRadius: 2,
-			boxSizing: 'border-box',
-			height: 40,
-			marginBottom: 30,
-			padding: '3px 7px 0 10px',
-			width: 239
-		};
-
-		let buttonStyles = {
-			cursor: 'pointer',
-			float: 'left',
-			height: 30,
-			opacity: 1,
-			width: 30
-		};
-
-		let minusButtonStyles = JSON.parse(JSON.stringify(buttonStyles));
-		minusButtonStyles.background = "url('images/minus-button.png') center center no-repeat";
-		if(this.state.value === 1) {
-			minusButtonStyles.cursor = 'default';
-			minusButtonStyles.opacity = .5;
-		}
-
-		let plusButtonStyles = JSON.parse(JSON.stringify(buttonStyles));
-		plusButtonStyles.background = "url('images/plus-button.png') center center no-repeat";
-
-		let quantityStyles = {
-			color: '#000',
-			float: 'left',
-			fontSize: 15,
-			fontWeight: 'bold',
-			lineHeight: '30px',
-			marginLeft: 13,
-			marginRight: 16
-		}
-
 		return (
-			<div style={containerStyles}>
-				<label htmlFor={this.props.name} style={{lineHeight: '32px'}}>quantity:</label>
-				<div style={{float: 'right'}}>
-					<div aria-label="Decrease quantity by one" style={minusButtonStyles} onClick={this.decrementValue}></div>
-					<div style={quantityStyles}>{this.state.value}</div>
-					<div aria-label="Increase quantity by one" style={plusButtonStyles} onClick={this.incrementValue}></div>
+			<div className="plusminus-container">
+				<label className="label" htmlFor={this.props.name}>quantity:</label>
+				<div className="controls-container">
+					<div className="minus-buttom" aria-label="Decrease quantity by one" style={(this.state.value === 1) ? {cursor: 'default', opacity: .5} : null} onClick={this.decrementValue}></div>
+					<div className="value-display">{this.state.value}</div>
+					<div className="plus-button" aria-label="Increase quantity by one" onClick={this.incrementValue}></div>
 				</div>
-				<input id={this.props.name} name={this.props.name} min="1" step="1" type="number" style={{display: 'none'}} value={this.state.value} readOnly />
+				<input id={this.props.name} className="hidden" name={this.props.name} min="1" step="1" type="number" value={this.state.value} readOnly />
 			</div>
 		);
 	}
