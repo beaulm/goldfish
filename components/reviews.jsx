@@ -1,6 +1,7 @@
 import React from 'react';
 import Stars from './stars.jsx';
 import Review from './review.jsx';
+import ReactGA from 'react-ga';
 
 class Reviews extends React.Component {
 	constructor(props) {
@@ -11,6 +12,10 @@ class Reviews extends React.Component {
 
 	showAllReviews() {
 		this.setState({reviewsVisible: true});
+		ReactGA.event({
+			category: 'Reviews',
+			action: 'All reviews shown'
+		});
 	}
 
 	render() {

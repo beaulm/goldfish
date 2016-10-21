@@ -4,10 +4,15 @@ import Promotion from './promotion.jsx';
 import PlusMinus from './plusminus.jsx';
 import striptags from 'striptags';
 import Reviews from './reviews.jsx';
+import ReactGA from 'react-ga';
 
 class App extends React.Component {
 	unhandledButtonClick(e) {
 		e.preventDefault();
+		ReactGA.event({
+			category: 'Button',
+			action: 'Some button was clicked'
+		});
 		alert('Feature unavailable at this time');
 	}
 

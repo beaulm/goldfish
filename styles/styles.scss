@@ -64,7 +64,7 @@ a {
 
 .slick-active {
 	border: 1px solid #999;
-	border-radius: 2px;
+	border-radius: .15em; /* 2px; */
 }
 
 #info-container {
@@ -155,7 +155,7 @@ a {
 #buttons-container button {
 	background-color: #F3F3F3;
 	border: 0;
-	border-radius: 2px;
+	border-radius: .15em; /* 2px; */
 	color: #333;
 	cursor: pointer;
 	font-size: 102.56%; /* 13.3333px; */
