@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactGA from 'react-ga';
 
 class PlusMinus extends React.Component {
 	constructor(props) {
@@ -11,12 +10,7 @@ class PlusMinus extends React.Component {
 
 	_changeValue(value) {
 		this.setState({value: value});
-		ReactGA.event({
-			category: 'PlusMinus',
-			action: 'Value changed',
-			label: 'Quantity',
-			value: value
-		});
+		window.ga('send', 'event', 'PlusMinus', 'Value changed', 'Quantity', value);
 	}
 
 	decrementValue() {

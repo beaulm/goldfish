@@ -1,6 +1,5 @@
 import React from 'react';
 import Slider from 'react-slick';
-import ReactGA from 'react-ga';
 
 class SliderNav extends React.Component {
 	render() {
@@ -28,11 +27,7 @@ class Carousel extends React.Component {
 	updateMainImageFromActiveSlide(e) {
 		e.preventDefault();
 		this.setState({primaryImage: this.state.altImages[this.state.activeSlide]});
-		ReactGA.event({
-			category: 'Product Carousel',
-			action: 'Main image changed',
-			label: this.state.altImages[this.state.activeSlide].image
-		});
+		window.ga('send', 'event', 'Product Carousel', 'Main image changed', this.state.altImages[this.state.activeSlide].image);
 	}
 
 	render() {
@@ -40,10 +35,7 @@ class Carousel extends React.Component {
 			adaptiveHeight: true,
 			afterChange: (index) => {
 				this.setState({activeSlide: index});
-				ReactGA.event({
-					category: 'Product Carousel',
-					action: 'Slide changed'
-				});
+				window.ga('send', 'event', 'Product Carousel', 'Slide changed');
 			},
 			centerMode: true,
 			centerPadding: 0,
